@@ -1,12 +1,5 @@
-@use "./normalize.css";
 @use "./global-style-variables" as *;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.test-header {
-  color: $primary;
-}
+@use "./normalize";
+@use "./body-html";
+@use "./test";
+@use "./style-reset";

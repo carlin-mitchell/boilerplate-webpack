@@ -1,5 +1,4 @@
 import "./styles/main.scss";
+import Content from "./components/Content/Content";
 
-import TestHeader from "./components/HelloWorld";
-
-document.body.appendChild(TestHeader("Hello World"));
+document.body.appendChild(Content());

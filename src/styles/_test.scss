@@ -1,0 +1,9 @@
+@use "./global-style-variables" as *;
+
+.test-header {
+  width: max-content;
+  color: $primary;
+  border: solid $secondary $base-border-width;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+}
