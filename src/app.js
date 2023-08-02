@@ -1,4 +1,4 @@
-import "./app.scss";
+import "./styles/main.scss";
 
 import TestHeader from "./components/HelloWorld";
 

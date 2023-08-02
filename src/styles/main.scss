@@ -1,6 +1,5 @@
 @use "./normalize.css";
-
-$red: red;
+@use "./global-style-variables" as *;
 
 * {
   box-sizing: border-box;
@@ -9,5 +8,5 @@ $red: red;
 }
 
 .test-header {
-  color: $red;
+  color: $primary;
 }
