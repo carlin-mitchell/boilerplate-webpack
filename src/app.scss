@@ -1,5 +1,6 @@
-:root {
-}
+@use "./normalize.css";
+
+$red: red;
 
 * {
   box-sizing: border-box;
@@ -8,5 +9,5 @@
 }
 
 .test-header {
-  color: red;
+  color: $red;
 }

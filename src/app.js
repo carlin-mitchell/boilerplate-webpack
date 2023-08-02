@@ -1,5 +1,4 @@
-import "./normalize.css";
-import "./style.css";
+import "./app.scss";
 
 import TestHeader from "./components/HelloWorld";
 
