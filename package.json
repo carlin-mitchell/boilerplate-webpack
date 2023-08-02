@@ -23,7 +23,7 @@
   "homepage": "https://github.com/carlin-mitchell/carlin-mitchell-etch-a-sketch-webpack-TOP#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^5.0.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-html": "^7.1.0",
