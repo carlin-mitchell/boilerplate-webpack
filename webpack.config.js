@@ -1,6 +1,13 @@
 const path = require("path");
+const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+
+const PATHS = {
+  src: path.join(__dirname, "src"),
+};
 
 module.exports = {
   mode: "development",
@@ -21,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -32,6 +39,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "XXXtitleXXX",
+    }),
+    new MiniCssExtractPlugin(),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
   ],
   optimization: {
