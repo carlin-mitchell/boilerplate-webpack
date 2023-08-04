@@ -1,5 +1,11 @@
-@use "./vars" as *;
+// normalize
 @use "./normalize";
+
+// base
 @use "./base";
-@use "./test";
-@use "./utilities/utilities";
+
+// utilities
+@use "./utilities/utilities-index";
+
+// components
+@use "./components/components-index";
