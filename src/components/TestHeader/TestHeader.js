@@ -1,6 +1,6 @@
 const TestHeader = (content) => {
   const h1 = Object.assign(document.createElement("h1"), {
-    className: "test-header",
+    className: "test-header bg-info p-sm",
     innerText: `${content}`,
   });
 

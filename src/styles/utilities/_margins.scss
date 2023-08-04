@@ -1,0 +1,12 @@
+@use "../vars" as *;
+@use "sass:math";
+
+$margin-sm: math.div($base-margin, 2);
+
+//margins
+.mb-sm {
+  margin-bottom: $margin-sm;
+}
+.mb-md {
+  margin-bottom: $base-margin;
+}

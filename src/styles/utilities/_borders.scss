@@ -1,0 +1,4 @@
+@use "../vars" as *;
+@use "sass:math";
+
+$border-radius-sm: math.div($base-border-radius, 4);

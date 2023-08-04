@@ -1,0 +1,14 @@
+@use "../vars" as *;
+@use "sass:math";
+
+$padding-sm: math.div($base-padding, 2);
+$padding-xs: math.div($base-padding, 4);
+
+//paddings
+
+.p-sm {
+  padding: $padding-sm;
+}
+.p-xs {
+  padding: $padding-xs;
+}
