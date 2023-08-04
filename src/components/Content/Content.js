@@ -13,7 +13,11 @@ import TestHeader from "../TestHeader/TestHeader";
 const Content = () => {
   const content = Element("div", { id: "content" });
 
-  content.appendChild(TestHeader("If this is blue then, its all connected!"));
+  content.appendChild(
+    TestHeader(
+      "If this is blue and the background is yellow it is all connected!!!"
+    )
+  );
   return content;
 };
 
