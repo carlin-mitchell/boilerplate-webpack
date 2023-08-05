@@ -149,3 +149,5 @@ out
 *.LICENSE.txt
 
 *.env
+
+.vscode
