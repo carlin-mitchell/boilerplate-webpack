@@ -1,11 +1,11 @@
 // normalize
-@use "./normalize";
+// @use "./normalize";
 
-// base
+// base & utilities
 @use "./base";
-
-// utilities
-@use "./utilities/utilities-index";
+@use "./utilities";
+@use "./colors";
+@use "./breakpoints";
 
 // components
 @use "./components/components-index";
