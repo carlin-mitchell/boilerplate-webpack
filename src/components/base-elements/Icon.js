@@ -9,9 +9,9 @@ import Element from "../Element";
 //   //
 // }
 
-const Component = () => {
-  const parentElement = Element("div", {});
-  return parentElement;
+const Icon = (iconClass) => {
+  const icon = Element("i", { className: `icon ${iconClass}` });
+  return icon;
 };
 
-export default Component;
+export default Icon;
