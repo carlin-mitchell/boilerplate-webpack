@@ -3,7 +3,9 @@ import Element from "../Element";
 
 const sharedClasses = " font-lg";
 const pencil = Icon("icon-pencil text-black rotate-180" + sharedClasses);
-const github = Icon("icon-github-cat text-red rotate-180" + sharedClasses);
+const github = Icon(
+  "icon-github-cat text-red rotate-180 font-xxxxl" + sharedClasses
+);
 const hamburger = Icon("icon-hamburger-menu text-green" + sharedClasses);
 const plus = Icon("icon-plus-sign text-purple" + sharedClasses);
 const x = Icon("icon-plus-sign text-gray-dark-9 rotate-45" + sharedClasses);
