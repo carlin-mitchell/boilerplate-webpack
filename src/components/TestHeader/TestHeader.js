@@ -2,10 +2,17 @@ import Icon from "../base-elements/Icon";
 import Element from "../Element";
 
 const sharedClasses = " font-lg";
-const pencil = Icon("icon-my-pencil text-black" + sharedClasses);
-const github = Icon("icon-github-cat text-red" + sharedClasses);
+const pencil = Icon("icon-pencil text-black rotate-180" + sharedClasses);
+const github = Icon("icon-github-cat text-red rotate-180" + sharedClasses);
 const hamburger = Icon("icon-hamburger-menu text-green" + sharedClasses);
 const plus = Icon("icon-plus-sign text-purple" + sharedClasses);
+const x = Icon("icon-plus-sign text-gray-dark-9 rotate-45" + sharedClasses);
+const upArrow = Icon(
+  "icon-up-arrow text-gray-dark-9 rotate-180" + sharedClasses
+);
+const triangle = Icon(
+  "icon-triangle text-gray-dark-9 rotate-315" + sharedClasses
+);
 
 const TestHeader = (content) => {
   const h1 = Element(
@@ -15,7 +22,7 @@ const TestHeader = (content) => {
       innerText: `${content}`,
     },
     // children
-    [pencil, github, hamburger, plus]
+    [pencil, github, hamburger, plus, x, upArrow, triangle]
   );
 
   return h1;

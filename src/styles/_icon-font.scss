@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icon-font";
-  src: url("../Assets/icon-font/icomoon.eot?zbbegd");
-  src: url("../Assets/icon-font/icomoon.eot?zbbegd#iefix")
+  src: url("../assets/icon-font/icomoon.eot?zbbegd");
+  src: url("../assets/icon-font/icomoon.eot?zbbegd#iefix")
       format("embedded-opentype"),
-    url("../Assets/icon-font/icomoon.ttf?zbbegd") format("truetype"),
-    url("../Assets/icon-font/icomoon.woff?zbbegd") format("woff"),
-    url("../Assets/icon-font/icomoon.svg?zbbegd#icomoon") format("svg");
+    url("../assets/icon-font/icomoon.ttf?zbbegd") format("truetype"),
+    url("../assets/icon-font/icomoon.woff?zbbegd") format("woff"),
+    url("../assets/icon-font/icomoon.svg?zbbegd#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,14 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pencil:before {
+  content: "\e900";
+  color: #4d4d4d;
+}
 .icon-up-arrow:before {
   content: "\eaeb";
 }
 .icon-triangle:before {
   content: "\eaec";
-}
-.icon-my-pencil:before {
-  content: "\eaed";
 }
 .icon-github-cat:before {
   content: "\eaee";
