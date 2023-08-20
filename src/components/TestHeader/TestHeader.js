@@ -16,6 +16,8 @@ const triangle = Icon(
   "icon-triangle text-gray-dark-9 rotate-315" + sharedClasses
 );
 
+const pause = Icon("icon-pause text-gray-dark-9" + sharedClasses);
+
 const TestHeader = (content) => {
   const h1 = Element(
     "h1",
@@ -24,7 +26,7 @@ const TestHeader = (content) => {
       innerText: `${content}`,
     },
     // children
-    [pencil, github, hamburger, plus, x, upArrow, triangle]
+    [pencil, github, hamburger, plus, x, upArrow, triangle, pause]
   );
 
   return h1;
