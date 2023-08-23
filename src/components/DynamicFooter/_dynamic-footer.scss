@@ -1,0 +1,48 @@
+@use "../../styles/vars" as *;
+@use "sass:map";
+#footer {
+  grid-area: footer;
+  padding: $padding-2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $padding-1;
+  & > * {
+    justify-self: center;
+  }
+  .copyright-container {
+    font-size: $base-font-size;
+    .icon {
+      margin-left: $margin-1 * 0.5;
+      cursor: pointer;
+      transition: transform 1s ease-in-out, scale 1s ease-in-out,
+        color 1s ease-in-out;
+      &:hover {
+        transform: rotate(720deg);
+        scale: 1.2;
+        color: map.get($colors, "link");
+      }
+    }
+  }
+  .top-container {
+    .top-link {
+      text-decoration: underline;
+      color: map.get($colors, "link");
+      margin-left: $margin-1 * 0.5;
+      &:link {
+        color: map.get($colors, "link");
+      }
+      &:visited {
+        color: map.get($colors, "link");
+      }
+      &:focus {
+        color: map.get($colors, "link");
+      }
+      &:hover {
+        color: map.get($colors, "link");
+      }
+      &:active {
+        color: map.get($colors, "link");
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import TestHeader from "../TestHeader/TestHeader";
+import Header from "../Header/Header";
+import DynamicFooter from "../DynamicFooter/DynamicFooter";
+import MainSection from "../MainSection/MainSection";
 
 // LOGIC IMPORTS
 //
@@ -11,13 +13,12 @@ import TestHeader from "../TestHeader/TestHeader";
 // }
 
 const Content = () => {
-  const content = Element("div", { id: "content" });
+  const content = Element("div", { id: "content" }, [
+    Header(),
+    MainSection(),
+    DynamicFooter(),
+  ]);
 
-  content.appendChild(
-    TestHeader(
-      "If this is blue and the background is yellow it is all connected!!!"
-    )
-  );
   return content;
 };
 
