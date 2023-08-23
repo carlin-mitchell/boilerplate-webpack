@@ -1,15 +1,49 @@
 @use "../../styles/vars" as *;
+@use "../../styles/breakpoints" as screen;
 @use "sass:map";
 #footer {
   grid-area: footer;
   padding: $padding-2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: $padding-1;
-  & > * {
-    justify-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "copyright TOP attributions"
+    "copyright TOP attributions"
+    "copyright TOP attributions";
+  @include screen.xl {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "copyright TOP attributions"
+      "copyright TOP attributions"
+      "copyright TOP attributions";
   }
+  @include screen.lg {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "copyright TOP attributions"
+      "copyright TOP attributions"
+      "copyright TOP attributions";
+  }
+  @include screen.md {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "copyright TOP"
+      "attributions attributions"
+      "attributions attributions";
+  }
+  @include screen.sm {
+    grid-template-areas:
+      "copyright copyright copyright"
+      "TOP TOP TOP"
+      "attributions attributions attributions";
+  }
+
+  gap: $padding-1;
+
   .copyright-container {
+    justify-self: center;
+    grid-area: copyright;
     font-size: $base-font-size;
     .icon {
       margin-left: $margin-1 * 0.5;
@@ -24,6 +58,8 @@
     }
   }
   .top-container {
+    justify-self: center;
+    grid-area: TOP;
     .top-link {
       text-decoration: underline;
       color: map.get($colors, "link");
@@ -46,12 +82,14 @@
     }
   }
   .attributions-container {
+    justify-self: center;
+    grid-area: attributions;
     .expandable-panel-title {
+      cursor: pointer;
       display: grid;
       grid-template-columns: auto auto;
       align-items: center;
       .icon {
-        font-size: $font-size-xs;
         margin-left: $margin-1;
       }
     }

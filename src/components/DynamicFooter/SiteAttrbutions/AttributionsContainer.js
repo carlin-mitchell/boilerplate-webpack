@@ -20,7 +20,7 @@ const AttributionsContainer = () => {
       className: "expandable-panel-title",
       innerText: "Site Attributions",
     },
-    [Icon("icon-triangle")]
+    [Icon("icon-up-down")]
   );
 
   const otherClasses = "";
