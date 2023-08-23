@@ -1,6 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import CopyrightContainer from "./CopyrightContainer";
+import AttributionsContainer from "./SiteAttrbutions/AttributionsContainer";
 import TOPContainer from "./TOPLinkContainer";
 
 // LOGIC IMPORTS
@@ -19,7 +20,7 @@ const DynamicFooter = () => {
       id: "footer",
       className: "" + " " + otherClasses,
     },
-    [CopyrightContainer(), TOPContainer()]
+    [CopyrightContainer(), TOPContainer(), AttributionsContainer()]
   );
   return footer;
 };

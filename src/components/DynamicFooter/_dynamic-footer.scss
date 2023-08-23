@@ -45,4 +45,15 @@
       }
     }
   }
+  .attributions-container {
+    .expandable-panel-title {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      .icon {
+        font-size: $font-size-xs;
+        margin-left: $margin-1;
+      }
+    }
+  }
 }

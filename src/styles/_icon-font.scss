@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icon-font";
-  src: url("../assets/icon-font/icomoon.eot?zbbegd");
-  src: url("../assets/icon-font/icomoon.eot?zbbegd#iefix")
+  src: url("../assets/icon-font/icons.eot?zbbegd");
+  src: url("../assets/icon-font/icons.eot?zbbegd#iefix")
       format("embedded-opentype"),
-    url("../assets/icon-font/icomoon.ttf?zbbegd") format("truetype"),
-    url("../assets/icon-font/icomoon.woff?zbbegd") format("woff"),
-    url("../assets/icon-font/icomoon.svg?zbbegd#icomoon") format("svg");
+    url("../assets/icon-font/icons.ttf?zbbegd") format("truetype"),
+    url("../assets/icon-font/icons.woff?zbbegd") format("woff"),
+    url("../assets/icon-font/icons.svg?zbbegd#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,25 +26,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github-cat:before {
+.icon-up-down:before {
   content: "\e900";
 }
-.icon-hamburger-menu:before {
+.icon-up-arrow:before {
   content: "\e901";
 }
-.icon-pause:before {
+.icon-triangle:before {
   content: "\e902";
 }
-.icon-pencil:before {
+.icon-plus-sign:before {
   content: "\e903";
+}
+.icon-pencil:before {
+  content: "\e904";
   color: #4d4d4d;
 }
-.icon-plus-sign:before {
-  content: "\e904";
-}
-.icon-triangle:before {
+.icon-hamburger-menu:before {
   content: "\e905";
 }
-.icon-up-arrow:before {
+.icon-github-cat:before {
   content: "\e906";
 }

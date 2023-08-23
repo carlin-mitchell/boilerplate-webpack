@@ -1,3 +1,5 @@
+import { debounce } from "../../utils";
+
 const breakPoints = {
   xs: 0,
   sm: 480,
@@ -8,13 +10,6 @@ const breakPoints = {
 
 export function applyWindowListeners() {
   window.onresize = debounce(function (e) {
-    const { innerWidth } = e.target;
-
-    if (innerWidth >= breakPoints.md) {
-      const mobileMenu = document.querySelector(".mobile-menu");
-      if (mobileMenu.classList.contains("menu-down")) {
-        mobileMenuUp();
-      }
-    }
+    //
   });
 }
