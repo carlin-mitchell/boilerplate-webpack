@@ -10,7 +10,13 @@ import Element from "../Element";
 // }
 
 const Component = () => {
-  const parentElement = Element("div", {});
+  const otherClasses = "";
+  const parentElement = Element(
+    "div",
+    { className: "" + " " + otherClasses },
+    // add child elements to the array below
+    []
+  );
   return parentElement;
 };
 
