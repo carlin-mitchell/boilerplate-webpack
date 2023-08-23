@@ -1,3 +1,5 @@
+import Element from "./components/Element";
+
 export const truncateAndAddEllipse = (string, numCharsToKeep) => {
   return string.slice(0, numCharsToKeep).trimEnd() + "...";
 };
@@ -30,4 +32,16 @@ export function capitalize(string) {
     return string[0].toUpperCase() + string.slice(1).toLowerCase();
   }
   return string;
+}
+
+export function generateTestContentArr(numChildren) {
+  return Array(numChildren)
+    .fill(0)
+    .map((elem) =>
+      Element("p", {
+        className: "display-b mb-1",
+        innerText:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ullam ad, maxime enim sequi sunt quo facilis illo eveniet laudantium quae repellendus dolorum omnis minima ducimus architecto! Beatae, vel assumenda.",
+      })
+    );
 }
