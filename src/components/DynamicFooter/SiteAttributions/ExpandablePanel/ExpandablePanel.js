@@ -23,6 +23,8 @@ const ExpandablePanelContainer = (props) => {
     expandButton,
   ]);
 
+  const contents = Element("div", { className: "expandable-panel-contents" });
+
   const otherClasses = "";
   const panel = Element(
     "a",
