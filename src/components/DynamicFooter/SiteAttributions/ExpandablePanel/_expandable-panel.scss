@@ -1,0 +1,8 @@
+.expandable-panel {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  .icon {
+    font-size: inherit;
+    color: white;
+  }
+}

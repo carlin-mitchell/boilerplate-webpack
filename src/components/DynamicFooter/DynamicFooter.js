@@ -1,7 +1,7 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
 import CopyrightContainer from "./CopyrightContainer";
-import AttributionsContainer from "./SiteAttrbutions/AttributionsContainer";
+import AttributionsContainer from "./SiteAttributions/AttributionsContainer";
 import TOPContainer from "./TOPLinkContainer";
 
 // LOGIC IMPORTS
