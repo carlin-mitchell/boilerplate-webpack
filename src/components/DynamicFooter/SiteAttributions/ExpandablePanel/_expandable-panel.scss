@@ -1,8 +1,30 @@
+@use "../../../../styles/vars" as *;
+
 .expandable-panel {
+}
+
+.expandable-panel-title {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  .icon {
-    font-size: inherit;
-    color: white;
+  grid-template-rows: 1fr;
+  gap: $padding-1 * 0.5;
+  cursor: pointer;
+  &:hover {
+    button {
+      background-color: white;
+      color: darken(gray, 30%);
+    }
+  }
+  button {
+    display: grid;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: $padding-1 * 0.2;
+    color: inherit;
+    .icon {
+      justify-self: center;
+      align-self: center;
+    }
   }
 }

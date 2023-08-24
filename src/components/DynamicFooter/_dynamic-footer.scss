@@ -61,7 +61,6 @@
       color: map.get($colors, "link");
       margin-left: $margin-1 * 0.5;
       transition: font-weight 0.15s;
-      font-weight: 600;
       &:link {
         color: map.get($colors, "link");
       }
@@ -82,30 +81,30 @@
   .attributions-container {
     justify-self: center;
     grid-area: attributions;
-    display: grid;
-    .attribution {
-      .icon {
-        font-size: $font-size-xs;
-      }
-    }
-    .expandable-panel-title {
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: auto auto;
-      align-items: center;
+    // display: grid;
+    // .attribution {
+    //   .icon {
+    //     font-size: $font-size-xs;
+    //   }
+    // }
+    // .expandable-panel-title {
+    //   cursor: pointer;
+    //   display: grid;
+    //   grid-template-columns: auto auto;
+    //   align-items: center;
 
-      &:hover .icon {
-        scale: 1.1;
-        color: lighten(map.get($colors, "gray"), 30%);
-      }
-      &:active .icon {
-        color: inherit;
-        scale: 1;
-      }
-      .icon {
-        margin-left: $margin-1 * 0.5;
-        transition: scale 0.05s ease-in-out;
-      }
-    }
+    //   &:hover .icon {
+    //     scale: 1.1;
+    //     color: lighten(map.get($colors, "gray"), 30%);
+    //   }
+    //   &:active .icon {
+    //     color: inherit;
+    //     scale: 1;
+    //   }
+    //   .icon {
+    //     margin-left: $margin-1 * 0.5;
+    //     transition: scale 0.05s ease-in-out;
+    //   }
+    // }
   }
 }

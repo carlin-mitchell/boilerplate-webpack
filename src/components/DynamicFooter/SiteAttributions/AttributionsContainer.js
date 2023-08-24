@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import { attributionData } from "./data/attributions-data";
 
-import ExpandablePanel from "./ExpandablePanel/ExpandablePanel";
+import ExpandablePanelContainer from "./ExpandablePanel/ExpandablePanel";
 
 const componentId = uuidv4();
 
@@ -32,7 +32,7 @@ const AttributionsContainer = () => {
     "div",
     { className: "attributions-container" + " " + otherClasses },
     // add child elements to the array below
-    [...attributionData.map((obj) => ExpandablePanel(obj))]
+    [...attributionData.map((obj) => ExpandablePanelContainer(obj))]
   );
   return container;
 };
