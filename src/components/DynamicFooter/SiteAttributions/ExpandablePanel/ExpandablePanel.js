@@ -6,7 +6,6 @@ import ExpandablePanelContent from "./ExpandablePanelContent";
 
 import { v4 as uuidv4 } from "uuid";
 
-const componentId = uuidv4();
 // LOGIC IMPORTS
 //
 
@@ -16,6 +15,7 @@ const componentId = uuidv4();
 // }
 
 const ExpandablePanelContainer = (props) => {
+  const componentId = uuidv4();
   const { name, subItems } = props;
   const otherClasses = "";
   const panel = Element(

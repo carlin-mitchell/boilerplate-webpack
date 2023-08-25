@@ -14,6 +14,7 @@ function toggleExpansion(componentId) {
     `expandable-content-button-${componentId}`
   );
   expansionContent.classList.toggle("expanded");
+  toggleExpansionButton.classList.toggle("expanded");
 }
 
 const ExpandablePanelTitle = (props) => {
