@@ -16,13 +16,14 @@ const ExpandablePanelContent = (props) => {
   subItems = subItems ? subItems : [];
   console.log(subItems);
   const otherClasses = "";
+
   const content = Element("div", { className: "content" }, [
     ...subItems.map((obj) => {
-      if (obj.subItems.length) {
-        console.log(obj.name, "expandable");
+      if (obj.name.toLowerCase() === "other icons") {
+        return NonExpandablePanelContainer(obj);
+      } else if (obj.subItems && obj.subItems.length) {
         return ExpandablePanelContainer(obj);
       } else {
-        console.log(obj.name, "non expandable");
         return NonExpandablePanelContainer(obj);
       }
     }),

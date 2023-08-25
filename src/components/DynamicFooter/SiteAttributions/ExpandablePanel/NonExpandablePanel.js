@@ -14,16 +14,24 @@ const componentId = uuidv4();
 // }
 
 const NonExpandablePanelContainer = (props) => {
-  let { name, icons } = props;
+  let { name, icons, href } = props;
   icons = icons ? icons : [];
 
   const otherClasses = "";
   const panel = Element(
     "a",
-    { className: "non-expandable-panel" + " " + otherClasses, innerText: name },
+    {
+      className: `${otherClasses} non-expandable-panel ${
+        href ? "is-link" : ""
+      }`,
+      innerText: name,
+    },
     // add child elements to the array below
     [...icons.map((icon) => Icon(icon))]
   );
+  if (href) {
+    panel.href = href;
+  }
   return panel;
 };
 

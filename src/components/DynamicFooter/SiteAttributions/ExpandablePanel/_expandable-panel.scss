@@ -57,6 +57,9 @@
 }
 
 .non-expandable-panel {
+  &.is-link {
+    text-decoration: underline;
+  }
   .icon {
     margin-left: $margin-1 * 0.5;
   }

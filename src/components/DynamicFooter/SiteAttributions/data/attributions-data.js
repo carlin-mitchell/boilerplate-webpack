@@ -5,8 +5,16 @@ export const attributionData = [
       {
         name: "Icons",
         subItems: [
-          { name: "Github", subItems: [], icons: ["icon-github-cat"] },
-          { name: "Other Icons", subItems: [] },
+          {
+            name: "Github",
+            subItems: [],
+            icons: ["icon-github-cat"],
+            href: "https://github.com/logos",
+          },
+          {
+            name: "Other Icons",
+            subItems: [true],
+          },
         ],
       },
     ],
