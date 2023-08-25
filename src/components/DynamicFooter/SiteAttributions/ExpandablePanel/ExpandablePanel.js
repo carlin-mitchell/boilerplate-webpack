@@ -1,6 +1,8 @@
 // COMPONENT IMPORTS
 import Element from "../../../Element";
-import Icon from "../../../base-elements/Icon";
+
+import ExpandablePanelTitle from "./ExpandablePanelTitle";
+import ExpandablePanelContent from "./ExpandablePanelContent";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -14,23 +16,13 @@ const componentId = uuidv4();
 // }
 
 const ExpandablePanelContainer = (props) => {
-  const { name } = props;
-
-  const expandButton = Element("button", {}, [Icon("icon-up-down")]);
-
-  const titleDiv = Element("div", { className: "expandable-panel-title" }, [
-    Element("div", { className: "display-i-b", innerText: name }),
-    expandButton,
-  ]);
-
-  const contents = Element("div", { className: "expandable-panel-contents" });
-
+  const { name, subItems } = props;
   const otherClasses = "";
   const panel = Element(
     "a",
     { className: "expandable-panel" + " " + otherClasses },
     // add child elements to the array below
-    [titleDiv]
+    [ExpandablePanelTitle(name), ExpandablePanelContent(subItems)]
   );
   return panel;
 };

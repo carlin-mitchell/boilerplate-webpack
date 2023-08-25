@@ -22,9 +22,13 @@
     border-radius: 5px;
     padding: $padding-1 * 0.2;
     color: inherit;
+    cursor: inherit;
     .icon {
       justify-self: center;
       align-self: center;
     }
   }
+}
+
+.expandable-panel-content {
 }
