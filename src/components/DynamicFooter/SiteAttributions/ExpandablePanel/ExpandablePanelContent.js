@@ -9,13 +9,19 @@ import Element from "../../../Element";
 //   //
 // }
 
-const ExpandablePanelContent = (subItems) => {
+const ExpandablePanelContent = (props) => {
+  let { subItems, componentId } = props;
+  subItems = subItems ? subItems : [];
+
   const otherClasses = "";
   const parentElement = Element(
     "div",
-    { className: "expandable-panel-content" + " " + otherClasses },
+    {
+      id: `expandable-content-${componentId}`,
+      className: "expandable-panel-content" + " " + otherClasses,
+    },
     // add child elements to the array below
-    []
+    [...subItems.map((item) => Element("div", { innerText: item.name }))]
   );
   return parentElement;
 };

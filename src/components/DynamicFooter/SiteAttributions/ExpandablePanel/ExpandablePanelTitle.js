@@ -6,21 +6,39 @@ import Icon from "../../../base-elements/Icon";
 //
 
 // COMPONENT METHODS
-// function someMethod() {
-//   //
-// }
+function toggleExpansion(componentId) {
+  const expansionContent = document.getElementById(
+    `expandable-content-${componentId}`
+  );
+  expansionContent.classList.toggle("expanded");
+}
 
-const ExpandablePanelTitle = (name) => {
-  //   const { name } = props;
+const ExpandablePanelTitle = (props) => {
+  const { name, componentId } = props;
+  console.log(props);
 
-  const expandButton = Element("button", {}, [Icon("icon-up-down")]);
+  const expandButton = Element(
+    "button",
+    {
+      onclick() {
+        toggleExpansion(componentId);
+      },
+    },
+    [Icon("icon-up-down")]
+  );
 
   const otherClasses = "";
   const titleDiv = Element(
     "div",
     { className: "expandable-panel-title" + " " + otherClasses },
     [
-      Element("div", { className: "display-i-b", innerText: name }),
+      Element("div", {
+        className: "display-i-b",
+        innerText: name,
+        onclick() {
+          toggleExpansion(componentId);
+        },
+      }),
       expandButton,
     ]
   );

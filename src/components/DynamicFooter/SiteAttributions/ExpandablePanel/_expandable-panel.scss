@@ -31,4 +31,14 @@
 }
 
 .expandable-panel-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.5s ease-in-out;
+  * {
+    overflow: hidden;
+  }
+  &.expanded {
+    grid-template-rows: 1fr;
+  }
 }

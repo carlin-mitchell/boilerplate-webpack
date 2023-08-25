@@ -22,7 +22,10 @@ const ExpandablePanelContainer = (props) => {
     "a",
     { className: "expandable-panel" + " " + otherClasses },
     // add child elements to the array below
-    [ExpandablePanelTitle(name), ExpandablePanelContent(subItems)]
+    [
+      ExpandablePanelTitle({ name, componentId }),
+      ExpandablePanelContent({ subItems, componentId }),
+    ]
   );
   return panel;
 };
