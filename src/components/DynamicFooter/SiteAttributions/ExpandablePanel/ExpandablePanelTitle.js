@@ -10,6 +10,9 @@ function toggleExpansion(componentId) {
   const expansionContent = document.getElementById(
     `expandable-content-${componentId}`
   );
+  const toggleExpansionButton = document.getElementById(
+    `expandable-content-button-${componentId}`
+  );
   expansionContent.classList.toggle("expanded");
 }
 
@@ -20,6 +23,7 @@ const ExpandablePanelTitle = (props) => {
   const expandButton = Element(
     "button",
     {
+      id: `expandable-content-button-${componentId}`,
       onclick() {
         toggleExpansion(componentId);
       },
