@@ -1,10 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../../../Element";
 
-import { v4 as uuidv4 } from "uuid";
-import Icon from "../../../base-elements/Icon";
-
-const componentId = uuidv4();
 // LOGIC IMPORTS
 //
 
@@ -13,21 +9,22 @@ const componentId = uuidv4();
 //   //
 // }
 
-const NonExpandablePanelContainer = (props) => {
-  let { name, icons, href } = props;
-  icons = icons ? icons : [];
+const NonExpandablePanel = (props) => {
+  let { title, href, children } = props;
+  children = children ? children : [];
 
   const otherClasses = "";
+
   const panel = Element(
     "a",
     {
       className: `${otherClasses} non-expandable-panel ${
         href ? "is-link" : ""
       }`,
-      innerText: name,
+      innerText: title,
     },
     // add child elements to the array below
-    [...icons.map((icon) => Icon(icon))]
+    [...children]
   );
   if (href) {
     panel.href = href;
@@ -35,4 +32,4 @@ const NonExpandablePanelContainer = (props) => {
   return panel;
 };
 
-export default NonExpandablePanelContainer;
+export default NonExpandablePanel;

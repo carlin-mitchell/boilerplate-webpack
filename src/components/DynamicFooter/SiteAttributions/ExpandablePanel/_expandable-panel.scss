@@ -53,14 +53,30 @@
   }
   .content {
     display: grid;
+    gap: $padding-1 * 0.5;
   }
 }
 
 .non-expandable-panel {
   &.is-link {
     text-decoration: underline;
+    &:hover {
+      color: orangered;
+    }
   }
   .icon {
     margin-left: $margin-1 * 0.5;
+  }
+}
+
+.icons-explanation div {
+  font-style: italic;
+  font-size: $font-size-sm;
+  a {
+    display: inline;
+    text-decoration: underline;
+    &:hover {
+      color: orangered;
+    }
   }
 }

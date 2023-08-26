@@ -18,8 +18,7 @@ function toggleExpansion(componentId) {
 }
 
 const ExpandablePanelTitle = (props) => {
-  const { name, componentId } = props;
-  console.log(props);
+  const { title, componentId } = props;
 
   const expandButton = Element(
     "button",
@@ -39,7 +38,7 @@ const ExpandablePanelTitle = (props) => {
     [
       Element("div", {
         className: "display-i-b",
-        innerText: name,
+        innerText: title,
         onclick() {
           toggleExpansion(componentId);
         },

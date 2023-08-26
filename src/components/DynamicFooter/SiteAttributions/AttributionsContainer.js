@@ -5,10 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 
 import { attributionData } from "./data/attributions-data";
 
-import ExpandablePanelContainer from "./ExpandablePanel/ExpandablePanel";
-import NonExpandablePanelContainer from "./ExpandablePanel/NonExpandablePanel";
+import ExpandablePanel from "./ExpandablePanel/ExpandablePanel";
+import NonExpandablePanel from "./ExpandablePanel/NonExpandablePanel";
 
-const componentId = uuidv4();
+import IconsExplanation from "./IconsExpnanation";
 
 // LOGIC IMPORTS
 //
@@ -19,29 +19,30 @@ const componentId = uuidv4();
 // }
 
 const AttributionsContainer = () => {
-  const panelTitle = Element(
-    "a",
-    {
-      className: "expandable-panel-title",
-      innerText: "Site Attributions",
-    },
-    [Icon("icon-up-down")]
-  );
-
   const otherClasses = "";
   const container = Element(
     "div",
     { className: "attributions-container" + " " + otherClasses },
     // add child elements to the array below
     [
-      ...attributionData.map((obj) => {
-        if (obj.subItems) {
-          console.log(obj.name, "expandable");
-          return ExpandablePanelContainer(obj);
-        } else {
-          console.log(obj.name, "non expandable");
-          return NonExpandablePanelContainer(obj);
-        }
+      ExpandablePanel({
+        title: "Site Attributions",
+        children: [
+          ExpandablePanel({
+            title: "Icons",
+            children: [
+              NonExpandablePanel({
+                title: "Github",
+                href: "https://github.com/logos",
+                children: [Icon("icon-github-cat")],
+              }),
+              ExpandablePanel({
+                title: "All other Icons",
+                children: [IconsExplanation()],
+              }),
+            ],
+          }),
+        ],
       }),
     ]
   );

@@ -14,20 +14,21 @@ import { v4 as uuidv4 } from "uuid";
 //   //
 // }
 
-const ExpandablePanelContainer = (props) => {
+const ExpandablePanel = (props) => {
+  console.log(props);
   const componentId = uuidv4();
-  const { name, subItems } = props;
+  const { title, children } = props;
   const otherClasses = "";
   const panel = Element(
     "a",
     { className: "expandable-panel" + " " + otherClasses },
     // add child elements to the array below
     [
-      ExpandablePanelTitle({ name, componentId }),
-      ExpandablePanelContent({ subItems, componentId }),
+      ExpandablePanelTitle({ title, componentId }),
+      ExpandablePanelContent({ children, componentId }),
     ]
   );
   return panel;
 };
 
-export default ExpandablePanelContainer;
+export default ExpandablePanel;

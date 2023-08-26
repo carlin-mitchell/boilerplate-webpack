@@ -12,22 +12,11 @@ import NonExpandablePanelContainer from "./NonExpandablePanel";
 // }
 
 const ExpandablePanelContent = (props) => {
-  let { subItems, componentId } = props;
-  subItems = subItems ? subItems : [];
-  console.log(subItems);
-  const otherClasses = "";
+  let { children, componentId } = props;
+  children = children ? children : [];
 
-  const content = Element("div", { className: "content" }, [
-    ...subItems.map((obj) => {
-      if (obj.name.toLowerCase() === "other icons") {
-        return NonExpandablePanelContainer(obj);
-      } else if (obj.subItems && obj.subItems.length) {
-        return ExpandablePanelContainer(obj);
-      } else {
-        return NonExpandablePanelContainer(obj);
-      }
-    }),
-  ]);
+  const content = Element("div", { className: "content" }, [...children]);
+  const otherClasses = "";
   const parentElement = Element(
     "div",
     {
