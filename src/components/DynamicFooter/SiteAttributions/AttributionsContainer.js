@@ -1,9 +1,9 @@
 // COMPONENT IMPORTS
 import Element from "../../Element";
-import Icon from "../../custom-components/Icon";
+import Icon from "../../_custom-components/Icon";
 
-import ExpandablePanel from "../../custom-components/ExpandablePanel/ExpandablePanel";
-import NonExpandablePanel from "../../custom-components/ExpandablePanel/NonExpandablePanel";
+import ExpandablePanel from "../../_custom-components/ExpandablePanel/ExpandablePanel";
+import NonExpandablePanel from "../../_custom-components/ExpandablePanel/NonExpandablePanel";
 
 import IconsExplanation from "./IconsExpnanation";
 

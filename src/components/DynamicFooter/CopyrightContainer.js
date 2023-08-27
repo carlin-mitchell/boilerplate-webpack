@@ -1,6 +1,6 @@
 // COMPONENT IMPORTS
 import Element from "../Element";
-import Icon from "../custom-components/Icon";
+import Icon from "../_custom-components/Icon";
 
 // LOGIC IMPORTS
 import { githubInfo } from "../../page-logic/data/data-page-config";
