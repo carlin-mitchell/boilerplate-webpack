@@ -1,6 +1,6 @@
 // COMPONENT IMPORTS
-import Element from "../../../Element";
-import Icon from "../../../base-elements/Icon";
+import Element from "../../Element";
+import Icon from "../Icon";
 
 // LOGIC IMPORTS
 //

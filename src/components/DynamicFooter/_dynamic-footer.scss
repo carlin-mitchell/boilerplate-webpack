@@ -2,7 +2,6 @@
 @use "../../styles/breakpoints" as screen;
 @use "sass:map";
 
-@use "./SiteAttributions/ExpandablePanel/expandable-panel";
 #footer {
   grid-area: footer;
   padding-top: $padding-2 * 1.5;

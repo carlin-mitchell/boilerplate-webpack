@@ -1,12 +1,9 @@
 // COMPONENT IMPORTS
 import Element from "../../Element";
-import Icon from "../../base-elements/Icon";
-import { v4 as uuidv4 } from "uuid";
+import Icon from "../../custom-components/Icon";
 
-import { attributionData } from "./data/attributions-data";
-
-import ExpandablePanel from "./ExpandablePanel/ExpandablePanel";
-import NonExpandablePanel from "./ExpandablePanel/NonExpandablePanel";
+import ExpandablePanel from "../../custom-components/ExpandablePanel/ExpandablePanel";
+import NonExpandablePanel from "../../custom-components/ExpandablePanel/NonExpandablePanel";
 
 import IconsExplanation from "./IconsExpnanation";
 
