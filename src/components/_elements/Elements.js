@@ -44,6 +44,9 @@ export const Br = (props, children) =>
 export const Div = (props, children) =>
   Element("div", props ? { ...props } : {}, children ? [...children] : []);
 
+export const Fieldset = (props, children) =>
+  Element("fieldset", props ? { ...props } : {}, children ? [...children] : []);
+
 export const Footer = (props, children) =>
   Element("footer", props ? { ...props } : {}, children ? [...children] : []);
 
@@ -76,6 +79,9 @@ export const Input = (props, children) =>
 
 export const Label = (props, children) =>
   Element("label", props ? { ...props } : {}, children ? [...children] : []);
+
+export const Legend = (props, children) =>
+  Element("legend", props ? { ...props } : {}, children ? [...children] : []);
 
 export const Li = (props, children) =>
   Element("li", props ? { ...props } : {}, children ? [...children] : []);
