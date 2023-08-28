@@ -48,6 +48,9 @@ export const Img = (props, children) =>
 export const Input = (props, children) =>
   Element("input", props ? { ...props } : {}, children ? [...children] : []);
 
+export const Label = (props, children) =>
+  Element("label", props ? { ...props } : {}, children ? [...children] : []);
+
 export const Li = (props, children) =>
   Element("li", props ? { ...props } : {}, children ? [...children] : []);
 
