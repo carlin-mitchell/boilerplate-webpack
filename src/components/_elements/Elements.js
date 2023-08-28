@@ -44,7 +44,7 @@ export const Br = (props, children) =>
 export const Div = (props, children) =>
   Element("div", props ? { ...props } : {}, children ? [...children] : []);
 
-export const DataList = (props, children) =>
+export const Datalist = (props, children) =>
   Element("datalist", props ? { ...props } : {}, children ? [...children] : []);
 
 export const Fieldset = (props, children) =>
