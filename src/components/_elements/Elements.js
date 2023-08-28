@@ -47,6 +47,9 @@ export const Div = (props, children) =>
 export const Footer = (props, children) =>
   Element("footer", props ? { ...props } : {}, children ? [...children] : []);
 
+export const Form = (props, children) =>
+  Element("form", props ? { ...props } : {}, children ? [...children] : []);
+
 export const H1 = (props, children) =>
   Element("h1", props ? { ...props } : {}, children ? [...children] : []);
 
