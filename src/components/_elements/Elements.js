@@ -6,30 +6,41 @@
  * @returns {Element} the a reference to the element created in memory
  */
 export const Element = (typeStr, propsObj, childArr = null) => {
-  // list is an attribute that can oly be set using the Element.setAttribute() method.
-  // If it is in the propsObj Object.assign will fail. We'll remove it from the props Object here and
-  // Assign it to the parent element before it is returned
-  let list;
-  if ("list" in propsObj) {
-    list = propsObj.list;
-    delete propsObj.list;
-  }
+  // Some attributes can only be set using the Element.setAttribute() method.
+  // If it is in the propsObj Object.assign will fail. We'll remove it from the
+  // props object here and assign them to the parent element before it is returned.
+  // These attributes should be added to the setAttributeProperties list for processing.
+  let setAttributeProperties = ["list"];
+  let properties = [];
+  setAttributeProperties.forEach((property) => {
+    if (property in propsObj) {
+      const value = propsObj[property];
+      properties.push({ name: property, value: value });
+      delete propsObj[property];
+    }
+  });
 
-  if (childArr && !Array.isArray(childArr)) {
-    childArr = [childArr];
-  }
-
+  // Create an element based on the type string provided
   const parentElement = Object.assign(
     document.createElement(typeStr),
     propsObj
   );
 
+  // Add passed in child to array if it is not already
+  if (childArr && !Array.isArray(childArr)) {
+    childArr = [childArr];
+  }
+
+  // Append children to the element
   if (childArr) {
     childArr.forEach((child) => parentElement.appendChild(child));
   }
 
-  if (list) {
-    parentElement.setAttribute("list", list);
+  // Apply properties with setAttribute if needed
+  if (properties.length) {
+    properties.forEach((property) => {
+      parentElement.setAttribute(property.name, property.value);
+    });
   }
 
   return parentElement;
