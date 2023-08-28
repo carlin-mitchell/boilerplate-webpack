@@ -6,6 +6,15 @@
  * @returns {Element} the a reference to the element created in memory
  */
 export const Element = (typeStr, propsObj, childArr = null) => {
+  // list is an attribute that can oly be set using the Element.setAttribute() method.
+  // If it is in the propsObj Object.assign will fail. We'll remove it from the props Object here and
+  // Assign it to the parent element before it is returned
+  let list;
+  if ("list" in propsObj) {
+    list = propsObj.list;
+    delete propsObj.list;
+  }
+
   if (childArr && !Array.isArray(childArr)) {
     childArr = [childArr];
   }
@@ -17,6 +26,10 @@ export const Element = (typeStr, propsObj, childArr = null) => {
 
   if (childArr) {
     childArr.forEach((child) => parentElement.appendChild(child));
+  }
+
+  if (list) {
+    parentElement.setAttribute("list", list);
   }
 
   return parentElement;
