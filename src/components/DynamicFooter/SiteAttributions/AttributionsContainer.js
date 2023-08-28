@@ -1,11 +1,11 @@
 // COMPONENT IMPORTS
-import Element from "../../Element";
+import { Element } from "../../_elements/Elements";
 import Icon from "../../_custom-components/Icon";
 
 import ExpandablePanel from "../../_custom-components/ExpandablePanel/ExpandablePanel";
 import NonExpandablePanel from "../../_custom-components/ExpandablePanel/NonExpandablePanel";
 
-import IconsExplanation from "./IconsExpnanation";
+import IconsExplanation from "./IconsExplanation";
 
 // LOGIC IMPORTS
 //

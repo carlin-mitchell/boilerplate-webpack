@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
+import { Element } from "../_elements/Elements";
 import Icon from "../_custom-components/Icon";
 
 // LOGIC IMPORTS

@@ -1,6 +1,6 @@
 // COMPONENT IMPORTS
 import { generateTestContentArr } from "../../utils";
-import Element from "../Element";
+import { Element } from "../_elements/Elements";
 
 // LOGIC IMPORTS
 //

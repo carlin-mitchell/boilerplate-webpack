@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../../Element";
+import { Element } from "../../_elements/Elements";
 import ExpandablePanelContainer from "./ExpandablePanel";
 import NonExpandablePanelContainer from "./NonExpandablePanel";
 

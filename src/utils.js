@@ -1,4 +1,4 @@
-import Element from "./components/Element";
+import { Element } from "./components/_elements/Elements";
 
 export const truncateAndAddEllipse = (string, numCharsToKeep) => {
   return string.slice(0, numCharsToKeep).trimEnd() + "...";

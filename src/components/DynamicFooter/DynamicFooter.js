@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
+import { Element } from "../_elements/Elements";
 import CopyrightContainer from "./CopyrightContainer";
 import AttributionsContainer from "./SiteAttributions/AttributionsContainer";
 import TOPContainer from "./TOPLinkContainer";

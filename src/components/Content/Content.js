@@ -1,5 +1,4 @@
-// COMPONENT IMPORTS
-import Element from "../Element";
+import { Element } from "../_elements/Elements";
 import Header from "../Header/Header";
 import DynamicFooter from "../DynamicFooter/DynamicFooter";
 import MainSection from "../MainSection/MainSection";

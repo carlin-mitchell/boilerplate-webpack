@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Div } from "./_basic-elements/basic-elements";
+import { Div } from "./_elements/Elements";
 
 // LOGIC IMPORTS
 //
