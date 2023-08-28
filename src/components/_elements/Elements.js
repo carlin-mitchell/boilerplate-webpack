@@ -44,6 +44,9 @@ export const Br = (props, children) =>
 export const Div = (props, children) =>
   Element("div", props ? { ...props } : {}, children ? [...children] : []);
 
+export const DataList = (props, children) =>
+  Element("datalist", props ? { ...props } : {}, children ? [...children] : []);
+
 export const Fieldset = (props, children) =>
   Element("fieldset", props ? { ...props } : {}, children ? [...children] : []);
 
@@ -91,6 +94,9 @@ export const Main = (props, children) =>
 
 export const Ol = (props, children) =>
   Element("ol", props ? { ...props } : {}, children ? [...children] : []);
+
+export const Option = (props, children) =>
+  Element("option", props ? { ...props } : {}, children ? [...children] : []);
 
 export const P = (props, children) =>
   Element("p", props ? { ...props } : {}, children ? [...children] : []);
