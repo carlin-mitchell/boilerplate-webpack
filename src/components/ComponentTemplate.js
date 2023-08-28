@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
+import { Div } from "./_basic-elements/basic-elements";
 
 // LOGIC IMPORTS
 //
@@ -10,10 +10,10 @@ import Element from "../Element";
 // }
 
 const Component = () => {
-  const otherClasses = "";
-  const parentElement = Element(
-    "div",
-    { className: "" + " " + otherClasses },
+  //
+
+  const parentElement = Div(
+    { innerText: ``, className: `` },
     // add child elements to the array below
     []
   );
