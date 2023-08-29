@@ -1,6 +1,7 @@
 // COMPONENT IMPORTS
 import { generateTestContentArr } from "../../utils";
-import { Element } from "../_elements/Elements";
+import CustomIconsDisplay from "../_custom-components/CustomIconsDisplay/CustomIconsDisplay";
+import { Main } from "../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -12,14 +13,13 @@ import { Element } from "../_elements/Elements";
 
 const MainSection = () => {
   const otherClasses = "";
-  const main = Element(
-    "main",
+  const main = Main(
     {
       id: "main-section",
       className: "" + " " + otherClasses,
     },
     // add child elements to the array below
-    []
+    [CustomIconsDisplay()]
   );
   return main;
 };
