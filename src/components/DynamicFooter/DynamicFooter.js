@@ -13,9 +13,18 @@ import TOPContainer from "./TOPLinkContainer";
 // }
 
 const DynamicFooter = () => {
-  const parentElement = Footer(
-    { id: `footer`, className: `bg-gray-dark-3 text-white` },
-    [CopyrightContainer(), TOPContainer(), AttributionsContainer()]
+  // prettier-ignore
+  const parentElement = 
+  Footer(
+    { 
+      id: `footer`, 
+      className: `bg-gray-dark-3 text-white` 
+    },
+    [
+     CopyrightContainer(), 
+     TOPContainer(), 
+     AttributionsContainer()
+    ]
   );
 
   return parentElement;
