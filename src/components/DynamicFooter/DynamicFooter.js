@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../_elements/Elements";
+import { Div, Footer } from "../_elements/Elements";
 import CopyrightContainer from "./CopyrightContainer";
 import AttributionsContainer from "./SiteAttributions/AttributionsContainer";
 import TOPContainer from "./TOPLinkContainer";
@@ -13,16 +13,12 @@ import TOPContainer from "./TOPLinkContainer";
 // }
 
 const DynamicFooter = () => {
-  const otherClasses = "bg-gray-dark-3 text-white";
-  const footer = Element(
-    "footer",
-    {
-      id: "footer",
-      className: "" + " " + otherClasses,
-    },
+  const parentElement = Footer(
+    { id: `footer`, className: `bg-gray-dark-3 text-white` },
     [CopyrightContainer(), TOPContainer(), AttributionsContainer()]
   );
-  return footer;
+
+  return parentElement;
 };
 
 export default DynamicFooter;
