@@ -2,3 +2,8 @@
   grid-area: main-section;
   height: 100%;
 }
+
+.carousel-row {
+  display: grid;
+  justify-content: center;
+}
