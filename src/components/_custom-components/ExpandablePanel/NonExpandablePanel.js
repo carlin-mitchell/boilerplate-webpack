@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { A } from "../../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -15,8 +15,7 @@ const NonExpandablePanel = (props) => {
 
   const otherClasses = "";
 
-  const panel = Element(
-    "a",
+  const panel = A(
     {
       className: `${otherClasses} non-expandable-panel ${
         href ? "is-link" : ""

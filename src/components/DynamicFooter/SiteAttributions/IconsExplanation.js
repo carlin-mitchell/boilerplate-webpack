@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Div, A } from "../../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -10,25 +10,24 @@ import { Element } from "../../_elements/Elements";
 // }
 
 const IconsExplanation = () => {
-  const inkscapeLink = Element("a", {
-    href: "https://inkscape.org/",
-    innerText: "Inkscape",
-  });
-  const icoMoonLink = Element("a", {
-    href: "https://icomoon.io/",
-    innerText: "IcoMoon",
-  });
-
-  const div = Element("div", {
-    innerHTML: `All other icons were created by me using ${inkscapeLink.outerHTML} and converting them to a font with ${icoMoonLink.outerHTML}`,
-  });
-
-  const otherClasses = "";
-  const parentElement = Element(
-    "div",
-    { className: "icons-explanation" + " " + otherClasses, innerHTML: `` },
+  const parentElement = Div(
+    { className: `icons-explanation`, innerHTML: `` },
     // add child elements to the array below
-    [div]
+    [
+      Div({
+        innerHTML: `All other icons were created by me using ${
+          A({
+            href: "https://inkscape.org/",
+            innerText: "Inkscape",
+          }).outerHTML
+        } and converting them to a font with ${
+          A({
+            href: "https://icomoon.io/",
+            innerText: "IcoMoon",
+          }).outerHTML
+        }`,
+      }),
+    ]
   );
   return parentElement;
 };

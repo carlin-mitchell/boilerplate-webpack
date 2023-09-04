@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Element, Button, Div } from "../../_elements/Elements";
 import Icon from "../Icon";
 
 // LOGIC IMPORTS
@@ -20,34 +20,30 @@ function toggleExpansion(componentId) {
 const ExpandablePanelTitle = (props) => {
   const { title, componentId } = props;
 
-  const expandButton = Element(
-    "button",
-    {
-      id: `expandable-content-button-${componentId}`,
-      onclick() {
-        toggleExpansion(componentId);
-      },
-    },
-    [Icon("icon-up-down")]
-  );
-
-  const otherClasses = "";
-  const titleDiv = Element(
+  const parentElement = Element(
     "div",
-    { className: "expandable-panel-title" + " " + otherClasses },
+    { className: `expandable-panel-title` },
     [
-      Element("div", {
+      Div({
         className: "display-i-b",
         innerText: title,
         onclick() {
           toggleExpansion(componentId);
         },
       }),
-      expandButton,
+      Button(
+        {
+          id: `expandable-content-button-${componentId}`,
+          onclick() {
+            toggleExpansion(componentId);
+          },
+        },
+        [Icon("icon-up-down")]
+      ),
     ]
   );
 
-  return titleDiv;
+  return parentElement;
 };
 
 export default ExpandablePanelTitle;
