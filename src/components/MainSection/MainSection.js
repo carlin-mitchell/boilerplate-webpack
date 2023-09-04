@@ -2,7 +2,7 @@
 import { generateTestContentArr } from "../../utils";
 import CustomIconsDisplay from "../_custom-components/CustomIconsDisplay/CustomIconsDisplay";
 import ImageCarousel from "../_custom-components/ImageCarousel/ImageCarousel";
-import { Main } from "../_elements/Elements";
+import { Main, Div } from "../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -20,7 +20,10 @@ const MainSection = () => {
       className: "" + " " + otherClasses,
     },
     // add child elements to the array below
-    [CustomIconsDisplay(), ImageCarousel()]
+    [
+      CustomIconsDisplay(),
+      Div({ className: "carousel-row" }, [ImageCarousel()]),
+    ]
   );
   return main;
 };
