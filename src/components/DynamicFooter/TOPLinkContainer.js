@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../_elements/Elements";
+import { Div, A } from "../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -10,23 +10,23 @@ import { Element } from "../_elements/Elements";
 // }
 
 const TOPContainer = () => {
-  const topLink = Element("a", {
-    href: "https://www.theodinproject.com/",
-    className: "top-link",
-    innerText: "The Odin Project",
-  });
-
   const otherClasses = "";
-  const container = Element(
+  const parentElement = Div(
     "div",
     {
       className: "top-container" + " " + otherClasses,
       innerText: "Inspired By:",
     },
     // add child elements to the array below
-    [topLink]
+    [
+      A({
+        href: "https://www.theodinproject.com/",
+        className: "top-link",
+        innerText: "The Odin Project",
+      }),
+    ]
   );
-  return container;
+  return parentElement;
 };
 
 export default TOPContainer;
