@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../_elements/Elements";
+import { A, Div } from "../_elements/Elements";
 import Icon from "../_custom-components/Icon";
 
 // LOGIC IMPORTS
@@ -14,27 +14,21 @@ import { githubInfo } from "../../page-logic/data/data-page-config";
 const dynamicYear = new Date().getFullYear();
 
 const CopyrightContainer = () => {
-  const githubLink = Element(
-    "a",
-    {
-      href: "https://github.com/carlin-mitchell/" + githubInfo.repoName,
-    },
-    [Icon("icon-github-cat")]
-  );
-
-  const copyrightInfo = Element("div", {
-    className: "copyright-info display-i-b",
-    innerText: `© Carlin Mitchell ${dynamicYear}`,
-  });
-
   const otherClasses = "";
-  const container = Element(
-    "div",
+  const parentElement = Div(
     { className: "copyright-container" + " " + otherClasses },
     // add child elements to the array below
-    [copyrightInfo, githubLink]
+    [
+      Div({
+        className: "copyright-info display-i-b",
+        innerText: `© Carlin Mitchell ${dynamicYear}`,
+      }),
+      A({ href: `https://github.com/carlin-mitchell/${githubInfo.repoName}` }, [
+        Icon("icon-github-cat"),
+      ]),
+    ]
   );
-  return container;
+  return parentElement;
 };
 
 export default CopyrightContainer;
