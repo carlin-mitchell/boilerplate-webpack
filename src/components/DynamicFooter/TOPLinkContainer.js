@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Div, A } from "../_elements/Elements";
+import { A, Div } from "../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -10,11 +10,9 @@ import { Div, A } from "../_elements/Elements";
 // }
 
 const TOPContainer = () => {
-  const otherClasses = "";
-  const parentElement = Div(
-    "div",
+  const parentContainer = Div(
     {
-      className: "top-container" + " " + otherClasses,
+      className: `top-container`,
       innerText: "Inspired By:",
     },
     // add child elements to the array below
@@ -26,7 +24,7 @@ const TOPContainer = () => {
       }),
     ]
   );
-  return parentElement;
+  return parentContainer;
 };
 
 export default TOPContainer;

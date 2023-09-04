@@ -14,9 +14,8 @@ import { githubInfo } from "../../page-logic/data/data-page-config";
 const dynamicYear = new Date().getFullYear();
 
 const CopyrightContainer = () => {
-  const otherClasses = "";
   const parentElement = Div(
-    { className: "copyright-container" + " " + otherClasses },
+    { className: `copyright-container` },
     // add child elements to the array below
     [
       Div({

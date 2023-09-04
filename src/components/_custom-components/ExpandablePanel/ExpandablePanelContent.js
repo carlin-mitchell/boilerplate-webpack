@@ -1,7 +1,6 @@
 // COMPONENT IMPORTS
 import { Element } from "../../_elements/Elements";
-import ExpandablePanelContainer from "./ExpandablePanel";
-import NonExpandablePanelContainer from "./NonExpandablePanel";
+import { Div } from "../../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -15,16 +14,13 @@ const ExpandablePanelContent = (props) => {
   let { children, componentId } = props;
   children = children ? children : [];
 
-  const content = Element("div", { className: "content" }, [...children]);
-  const otherClasses = "";
-  const parentElement = Element(
-    "div",
+  const parentElement = Div(
     {
       id: `expandable-content-${componentId}`,
-      className: "expandable-panel-content" + " " + otherClasses,
+      className: `expandable-panel-content`,
     },
     // add child elements to the array below
-    [content]
+    [Div({ className: "content" }, [...children])]
   );
   return parentElement;
 };

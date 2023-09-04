@@ -16,10 +16,9 @@ import IconsExplanation from "./IconsExplanation";
 // }
 
 const AttributionsContainer = () => {
-  const otherClasses = "";
   const container = Element(
     "div",
-    { className: "attributions-container" + " " + otherClasses },
+    { className: `attributions-container` },
     // add child elements to the array below
     [
       ExpandablePanel({
