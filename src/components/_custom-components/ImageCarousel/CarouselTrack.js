@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
+import { Element } from "../../_elements/Elements";
 import CarouselSlide from "./CarouselSlide";
 
 import Brick from "./assets/brick.png";

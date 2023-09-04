@@ -1,6 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
-import Image from "../base-elements/Image";
+import { Element } from "../../_elements/Elements";
 
 // LOGIC IMPORTS
 //

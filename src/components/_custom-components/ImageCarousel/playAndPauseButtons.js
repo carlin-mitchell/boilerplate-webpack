@@ -1,5 +1,5 @@
-import Element from "../Element";
-import Icon from "../base-elements/Icon";
+import { Element } from "../../_elements/Elements";
+import Icon from "../Icon";
 import { clickCarouselPlay, clickCarouselPause } from "./ui/carousel-ui";
 
 export const PlayButton = Element(

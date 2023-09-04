@@ -1,4 +1,4 @@
-import Element from "../Element";
+import { Div, Element } from "../../_elements/Elements";
 import { clickCarouselNav } from "./ui/carousel-ui";
 import { PlayButton, PauseButton } from "./playAndPauseButtons";
 
@@ -30,8 +30,7 @@ const CarouselNav = (imageData) => {
     [PauseButton, PlayButton]
   );
 
-  const navDiv = Element(
-    "div",
+  const parentElement = Div(
     {
       id: ``,
       className: `carousel-nav pt-1`,
@@ -44,7 +43,7 @@ const CarouselNav = (imageData) => {
       ),
     ]
   );
-  return navDiv;
+  return parentElement;
 };
 
 export default CarouselNav;

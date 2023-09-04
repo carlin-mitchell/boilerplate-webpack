@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import Element from "../Element";
+import { Element } from "../../_elements/Elements";
 import LeftCarouselButton from "./LeftButton";
 import RightCarouselButton from "./RightButton";
 import CarouselTrackContainer from "./CarouselTrackContainer";
