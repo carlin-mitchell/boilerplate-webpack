@@ -1,9 +1,8 @@
-import { Element } from "../../_elements/Elements";
+import { Button } from "../../_elements/Elements";
 import Icon from "../Icon";
 import { clickCarouselPlay, clickCarouselPause } from "./ui/carousel-ui";
 
-export const PlayButton = Element(
-  "button",
+export const PlayButton = Button(
   {
     className: "play-button visible",
     onclick() {
@@ -13,8 +12,7 @@ export const PlayButton = Element(
   [Icon("icon-triangle rotate-90 font-sm text-gray-dark-4")]
 );
 
-export const PauseButton = Element(
-  "button",
+export const PauseButton = Button(
   {
     className: "pause-button",
     onclick() {

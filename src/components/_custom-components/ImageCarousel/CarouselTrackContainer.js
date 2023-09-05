@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Div } from "../../_elements/Elements";
 import CarouselTrack from "./CarouselTrack";
 
 // LOGIC IMPORTS
@@ -11,8 +11,7 @@ import CarouselTrack from "./CarouselTrack";
 // }
 
 const CarouselTrackContainer = (imageData) => {
-  const container = Element(
-    "div",
+  const container = Div(
     {
       id: ``,
       className: `carousel-track-container`,

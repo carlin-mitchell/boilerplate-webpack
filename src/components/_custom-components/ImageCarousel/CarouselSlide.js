@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Div, Img } from "../../_elements/Elements";
 
 // LOGIC IMPORTS
 //
@@ -10,21 +10,20 @@ import { Element } from "../../_elements/Elements";
 // }
 
 const CarouselSlide = (imageSource, id, startsActive) => {
-  const carouselImage = Element("img", {
-    src: imageSource,
-    className: "carousel-image",
-  });
-
-  const slide = Element(
-    "div",
+  const parentElement = Div(
     {
       id: `carousel-slide-` + id,
       className: `carousel-slide ${startsActive ? "active" : ""}`,
     },
     // children
-    [carouselImage]
+    [
+      Img({
+        src: imageSource,
+        className: "carousel-image",
+      }),
+    ]
   );
-  return slide;
+  return parentElement;
 };
 
 export default CarouselSlide;

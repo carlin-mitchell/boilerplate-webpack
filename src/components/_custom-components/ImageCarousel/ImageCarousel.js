@@ -1,5 +1,5 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Div } from "../../_elements/Elements";
 import LeftCarouselButton from "./LeftButton";
 import RightCarouselButton from "./RightButton";
 import CarouselTrackContainer from "./CarouselTrackContainer";
@@ -17,25 +17,16 @@ import { imageData } from "./data/imageLoader";
 // }
 
 const ImageCarousel = () => {
-  const sharedButtonClasses = "bg-transparent border-none p-1";
-  const leftButton = LeftCarouselButton(sharedButtonClasses);
-  const rightButton = RightCarouselButton(sharedButtonClasses);
-
-  const imageIds = Array(4)
-    .fill(null)
-    .map((elem) => uuidv4());
-
-  const carousel = Element(
-    "div",
+  const carousel = Div(
     {
       id: ``,
       className: `carousel pt-1 pb-1`,
     },
     // children
     [
-      leftButton,
+      LeftCarouselButton(),
       CarouselTrackContainer(imageData),
-      rightButton,
+      RightCarouselButton(),
       CarouselNav(imageData),
     ]
   );

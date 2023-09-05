@@ -1,10 +1,6 @@
 // COMPONENT IMPORTS
-import { Element } from "../../_elements/Elements";
+import { Ul } from "../../_elements/Elements";
 import CarouselSlide from "./CarouselSlide";
-
-import Brick from "./assets/brick.png";
-import PaintFace from "./assets/paint-face.png";
-import Mac from "./assets/mac.png";
 
 // LOGIC IMPORTS
 //
@@ -15,8 +11,7 @@ import Mac from "./assets/mac.png";
 // }
 
 const CarouselTrack = (imageData) => {
-  const carouselTrack = Element(
-    "ul",
+  const parentElement = Ul(
     {
       id: ``,
       className: `carousel-track`,
@@ -28,7 +23,7 @@ const CarouselTrack = (imageData) => {
       ),
     ]
   );
-  return carouselTrack;
+  return parentElement;
 };
 
 export default CarouselTrack;

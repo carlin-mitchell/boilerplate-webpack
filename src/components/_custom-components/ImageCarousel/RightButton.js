@@ -1,4 +1,4 @@
-import { Element } from "../../_elements/Elements";
+import { Button } from "../../_elements/Elements";
 import Icon from "../Icon";
 import { clickCarouselRight } from "./ui/carousel-ui";
 // LOGIC IMPORTS
@@ -10,10 +10,7 @@ import { clickCarouselRight } from "./ui/carousel-ui";
 // }
 
 const RightCarouselButton = (sharedClasses) => {
-  const icon = Icon("icon-up-arrow rotate-90");
-
-  const button = Element(
-    "button",
+  const button = Button(
     {
       id: ``,
       className: `carousel-button right ` + sharedClasses,
@@ -22,7 +19,7 @@ const RightCarouselButton = (sharedClasses) => {
       },
     },
     // children
-    [icon]
+    [Icon("icon-up-arrow rotate-90")]
   );
   return button;
 };

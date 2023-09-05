@@ -19,6 +19,7 @@
     height: 100%;
     background-color: transparent;
     border: none;
+    padding: $padding-1;
     &.right {
       grid-area: right_button;
     }

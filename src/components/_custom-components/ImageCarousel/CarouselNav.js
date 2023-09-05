@@ -1,6 +1,6 @@
-import { Div, Element } from "../../_elements/Elements";
-import { clickCarouselNav } from "./ui/carousel-ui";
-import { PlayButton, PauseButton } from "./playAndPauseButtons";
+import { Div } from "../../_elements/Elements";
+import CarouselNavIndicator from "./CarouselNavIndicator";
+import CarouselPlayPauseContainer from "./CarouselPlayPauseContainer";
 
 // LOGIC IMPORTS
 
@@ -10,26 +10,6 @@ import { PlayButton, PauseButton } from "./playAndPauseButtons";
 // }
 
 const CarouselNav = (imageData) => {
-  const carouselNavIndicator = (imageId, startsActive) =>
-    Element("button", {
-      id: `carousel-nav-${imageId}`,
-      className: `carousel-indicator display-i-b bg-gray-light-6 ${
-        startsActive ? "active" : ""
-      }`,
-      onclick: function () {
-        clickCarouselNav(imageId);
-      },
-    });
-
-  const carouselPlayPauseContainer = Element(
-    "div",
-    {
-      className: "carousel-play-pause-container",
-    },
-    // childern
-    [PauseButton, PlayButton]
-  );
-
   const parentElement = Div(
     {
       id: ``,
@@ -37,9 +17,13 @@ const CarouselNav = (imageData) => {
     },
     // children
     [
-      carouselPlayPauseContainer,
+      CarouselPlayPauseContainer(),
+      // Nav indicators
       ...imageData.map((obj, index) =>
-        carouselNavIndicator(obj.uuid, obj.isActive ? true : false)
+        CarouselNavIndicator({
+          imageId: obj.uuid,
+          startsActive: obj.isActive ? true : false,
+        })
       ),
     ]
   );
