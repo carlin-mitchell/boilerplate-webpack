@@ -1,21 +1,26 @@
 import { v4 as uuidv4 } from "uuid";
 
-// Image sources
-import Brick from "../assets/brick.png";
-import PaintFace from "../assets/paint-face.png";
-import Mac from "../assets/mac.png";
-import Computer from "../assets/computer.png";
-import WebDev from "..//assets/webdev.png";
-
+// Image source info
+const idList = Array(100)
+  .fill(null)
+  .map((e, i) => i)
+  .filter((e) => e !== 97);
+const randImgHeight = 300;
+const randImgWidth = 500;
 // add isActive: true to the slide you want to start as active
 const imageSources = [
-  { src: Brick, isActive: true },
-  { src: PaintFace },
-  { src: Mac },
-  { src: Computer },
-  { src: WebDev },
+  { src: "https://picsum.photos/400/300", isActive: true },
+  ...Array(5)
+    .fill(null)
+    .map((e) => {
+      return {
+        src: `https://picsum.photos/id/${
+          idList[Math.floor(Math.random() * idList.length)]
+        }/${randImgWidth}/${randImgHeight}`,
+      };
+    }),
 ];
-
+console.log(imageSources);
 export const imageData = imageSources.map((obj) => ({
   ...obj,
   uuid: uuidv4(),
