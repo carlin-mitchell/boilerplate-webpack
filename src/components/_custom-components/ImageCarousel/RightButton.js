@@ -19,7 +19,7 @@ const RightCarouselButton = (sharedClasses) => {
       },
     },
     // children
-    [Icon("icon-up-arrow rotate-90")]
+    [Icon("icon-up-arrow-short rotate-90")]
   );
   return button;
 };

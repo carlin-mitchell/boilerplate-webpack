@@ -1,7 +1,6 @@
 // COMPONENT IMPORTS
 import {
   Div,
-  Input,
   Label,
   Span,
   Datalist,
@@ -37,6 +36,7 @@ const CountryInput = () => {
           }).outerHTML
         }`,
       }),
+
       Select(
         {
           className: "country-input",
@@ -50,15 +50,6 @@ const CountryInput = () => {
           ...countries.map((country) => Option({ innerText: country })),
         ]
       ),
-      //   Input({
-      //     id: `${countryInputId}`,
-      //     type: "text",
-      //     required: true,
-      //     list: "countries",
-      //     oninput() {
-      //       //;
-      //     },
-      //   }),
 
       Div({ className: "error" }),
       Datalist({ id: "countries" }, [
@@ -66,7 +57,6 @@ const CountryInput = () => {
       ]),
     ]
   );
-  console.log(countries.join("|"));
   return parentElement;
 };
 

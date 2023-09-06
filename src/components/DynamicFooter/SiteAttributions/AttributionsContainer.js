@@ -32,6 +32,7 @@ const AttributionsContainer = () => {
                 href: "https://github.com/logos",
                 children: [Icon("icon-github-cat")],
               }),
+
               ExpandablePanel({
                 title: "All other Icons",
                 children: [IconsExplanation()],

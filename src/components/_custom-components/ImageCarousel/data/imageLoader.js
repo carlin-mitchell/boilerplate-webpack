@@ -1,26 +1,40 @@
 import { v4 as uuidv4 } from "uuid";
+import { getRandomInt } from "../../../../utils";
 
 // Image source info
-const idList = Array(100)
-  .fill(null)
-  .map((e, i) => i)
-  .filter((e) => e !== 97);
-const randImgHeight = 300;
-const randImgWidth = 500;
+function getPicsumId(min, max, exlusions) {
+  let randInt = getRandomInt(min, max);
+  while (true) {
+    if (exlusions.includes(randInt)) {
+      randInt = getRandomInt(min, max);
+    } else {
+      return randInt;
+    }
+  }
+}
+
+function getRandomImageSrc(width, height) {
+  return `https://picsum.photos/id/${getPicsumId(1, 100, [
+    97,
+  ])}/${width}/${height}`;
+}
+
+const numImages = 7;
+const imageWidth = 500;
+const imageHeight = 300;
+
 // add isActive: true to the slide you want to start as active
 const imageSources = [
-  { src: "https://picsum.photos/400/300", isActive: true },
-  ...Array(5)
+  { src: getRandomImageSrc(imageWidth, imageHeight), isActive: true },
+  ...Array(numImages)
     .fill(null)
     .map((e) => {
       return {
-        src: `https://picsum.photos/id/${
-          idList[Math.floor(Math.random() * idList.length)]
-        }/${randImgWidth}/${randImgHeight}`,
+        src: getRandomImageSrc(imageWidth, imageHeight),
       };
     }),
 ];
-console.log(imageSources);
+
 export const imageData = imageSources.map((obj) => ({
   ...obj,
   uuid: uuidv4(),

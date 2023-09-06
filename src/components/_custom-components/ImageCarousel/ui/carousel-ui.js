@@ -80,11 +80,6 @@ export function clickCarouselLeft() {
   gotoSpecificSlide(id);
 }
 
-export function togglePalyPause() {
-  const carouselAutoAdvance = getCarouselAutoAdvance();
-  setCarouselAutoAdvance(!carouselAutoAdvance);
-}
-
 // ######################## AUTO PROGRESSION ########################
 export function clickCarouselPlay() {
   handleAutoAdvance("play");
@@ -94,7 +89,7 @@ export function clickCarouselPlay() {
   const pauseButton = document.querySelector(".carousel .pause-button");
   pauseButton.classList.toggle("visible");
 }
-clickCarouselPlay;
+
 export function clickCarouselPause() {
   handleAutoAdvance("pause");
   const playButton = document.querySelector(".carousel .play-button");
