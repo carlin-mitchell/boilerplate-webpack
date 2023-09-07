@@ -2,10 +2,10 @@ import { v4 as uuidv4 } from "uuid";
 import { getRandomInt } from "../../../../utils";
 
 // Image source info
-function getPicsumId(min, max, exlusions) {
+function getPicsumId(min, max, exclusions) {
   let randInt = getRandomInt(min, max);
   while (true) {
-    if (exlusions.includes(randInt)) {
+    if (exclusions.includes(randInt)) {
       randInt = getRandomInt(min, max);
     } else {
       return randInt;
