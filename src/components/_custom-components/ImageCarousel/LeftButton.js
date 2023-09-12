@@ -20,7 +20,7 @@ const LeftCarouselButton = (sharedClasses) => {
       },
     },
     // children
-    [Icon("icon-up-arrow rotate-270 ")]
+    [Icon("icon-up-arrow-short rotate-270 ")]
   );
   return button;
 };
