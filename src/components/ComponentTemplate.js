@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 // COMPONENT IMPORTS
 import { Div } from "./_elements/Elements";
 
@@ -8,6 +10,11 @@ import { Div } from "./_elements/Elements";
 // function someMethod() {
 //   //
 // }
+
+export const componentId = uuidv4();
+export function getComponent() {
+  return document.getElementById(componentId);
+}
 
 const Component = () => {
   //
