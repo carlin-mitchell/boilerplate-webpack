@@ -6,10 +6,16 @@
  * @returns {Element} the a reference to the element created in memory
  */
 export const Element = (typeStr, propsObj, childArr = null) => {
-  // Some attributes can only be set using the Element.setAttribute() method.
-  // If it is in the propsObj Object.assign will fail. We'll remove it from the
-  // props object here and assign them to the parent element before it is returned.
-  // These attributes should be added to the setAttributeProperties list for processing.
+
+  /**
+  Some attributes can only be set using the Element.setAttribute() method.
+  If it is in the propsObj Object.assign will fail. We'll remove it from the
+  props object here and assign them to the parent element before it is returned.
+  In this case the 'list' attirbute on <input> elements needs to be set this way.
+  As you come across more attributes with this requirement, you can add them to the 
+  setAttributeProperties array below.
+  */
+
   let setAttributeProperties = ["list"];
   let properties = [];
   setAttributeProperties.forEach((property) => {
